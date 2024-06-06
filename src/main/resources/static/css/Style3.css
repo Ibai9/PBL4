@@ -1,0 +1,68 @@
+.custom-bg {
+    background-color: #F8F2EF; /* Color de fondo deseado */
+}
+
+.Logo {
+    height: 150px; /* Altura original */
+    width: 200px; /* Ancho original */
+}
+
+.smaller-logo {
+    height: 100px; /* Altura reducida */
+    width: auto; /* Ancho automático para mantener la proporción */
+}
+
+.bolsa {
+    height: 40px;
+    width: 30px;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif; /* Fuente personalizada */
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre productos */
+}
+
+.producto {
+    flex: 0 1 calc(33.33% - 20px); /* Ocupa siempre un tercio del contenedor */
+    box-sizing: border-box; /* Para incluir el padding y el border en el ancho total */
+    padding: 10px;
+    background-color: gray; /* Fondo negro */
+    border: 2px solid white; /* Borde blanco */
+    margin-bottom: 20px; /* Espacio entre productos */
+    text-align: left;
+    border-radius: 10px; /* Añade bordes redondeados de 10px */
+    transition: box-shadow 0.3s ease; /* Añade una transición suave para la sombra */
+}
+
+.producto:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Añade una sombra cuando se pasa el mouse */
+}
+
+.producto p {
+    color: white; /* Texto blanco */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+    height: 100%;           /* Ajusta según sea necesario */
+}
+
+.small-img {
+    width: 220px;
+    height: 350px; /* Mantiene la proporción de la imagen */
+}
+
+
+@media screen and (max-width: 600px) {
+    .producto {
+        flex: 0 1 100%; /* Para que haya solo una columna en una fila */
+    }
+}
+
